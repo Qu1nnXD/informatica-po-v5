@@ -1,4 +1,4 @@
-### voorbeeld galgje
+### voorbeeld galgje hallo
 '''
 import random
 
