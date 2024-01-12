@@ -1,0 +1,2 @@
+# galgje-informatica
+galgje gaming
