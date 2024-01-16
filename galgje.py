@@ -1,5 +1,5 @@
 ### voorbeeld galgje hallo
-'''
+
 import random
 
 def choose_word():
@@ -54,5 +54,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''
-print("Fortnite is")
+    
