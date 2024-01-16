@@ -1,3 +1,4 @@
+@echo off
 title testing
 color 0a
 echo wow ik heb lang geen batch gebruikt
