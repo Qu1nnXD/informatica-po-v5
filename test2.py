@@ -30,7 +30,9 @@ def hangman():
             print("Die letter heb je al geraden! Probeer opnieuw!")
             continue
         guessed_letters.append(guess)
-
+        if guess == word:
+            print("Goed zo! Wat een topper! Je hebt het woord geraden")
+            break
         if guess not in word:
             attempts -= 1
             print(f"Foute gok! Je hebt nog maar {attempts} pogingen!")
