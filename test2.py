@@ -1,6 +1,6 @@
 import random
 guessed_letters = []
-attempts = 11
+attempts = 6
 
 # word choosing
 def choose_word():
