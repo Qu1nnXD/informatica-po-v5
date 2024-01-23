@@ -28,9 +28,8 @@ for i in range(6):
         goed = True
         break
     if len(gok) != 6:
-    else:
-       print("Je moet een woord van 6 letters invoeren.")
-       break
+        print("Je moet een woord van 6 letters invoeren.")
+        break
     for j in range(6):
         if gok[j] == woord[j]:
                 print(gok[j], "is in het woord en op de juiste plek")
