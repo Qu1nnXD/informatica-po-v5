@@ -3,13 +3,13 @@ guessed_letters = []
 attempts = 6
 max:attempts = 6
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o','p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ë', 'ä', 'ö', 'ü', 'ï', 'é', 'è']
-# word choosing
+# woord kiezen
 def choose_word():
     words =["kaas", "ham", "boterham", "leverworst", "tosti", "frikandelbroodje", "saucijzenbroodje", "croissant", "hagelslag", "boter", "pindakaas", "chocopasta", "bolus", "zeehond", "melk", "chocolademelk", "fristi", "koffie", "thee", "papier", "computer", "telefoon", "financiën", "yuzu", "telecomprovider", "verantwoordelijkheid", "sympathie", "activiteit", "catastrofe", "anaal", "prostaatkanker", "maatschappij", "wappie", "vaccinatie", "liquidatie", "klimaatverandering", "koolstofdioxide", "uitdaging", "mensheid", "narcostaat", "douanepolitie", "zelfgenoegzaamheid", "meervoudigepersoonlijkheidsstoornis"]
     return random.choice(words)
 word = choose_word()
 
-# displaying words
+# woorden tonen
 def displayed_word(word, guessed_letters):
     display = " "
     for letter in word:
@@ -18,9 +18,9 @@ def displayed_word(word, guessed_letters):
         else:
             display += "_"
     return display
-# hangman visual stages
+# galgje beeldtoestanden
 def draw_hangman():
-    stages = [  # final state: head, torso, both arms, and both legs
+    stages = [  # eindtoestand: hoofd, torso, beide armen, en beide benen
                 """
                    --------
                    |      |
@@ -30,7 +30,7 @@ def draw_hangman():
                    |     / \\
                    -
                 """,
-                # head, torso, both arms, and one leg
+                # hoofd, torso, beide armen, en één been
                 """
                    --------
                    |      |
@@ -40,7 +40,7 @@ def draw_hangman():
                    |     / 
                    -
                 """,
-                # head, torso, and both arms
+                # hoofd, torso, en beide armen
                 """
                    --------
                    |      |
@@ -50,7 +50,7 @@ def draw_hangman():
                    |      
                    -
                 """,
-                # head, torso, and one arm
+                # hoofd, torso, één arm
                 """
                    --------
                    |      |
@@ -60,7 +60,7 @@ def draw_hangman():
                    |     
                    -
                 """,
-                # head and torso
+                # hoofd en torso
                 """
                    --------
                    |      |
@@ -70,7 +70,7 @@ def draw_hangman():
                    |     
                    -
                 """,
-                # head
+                # hoofd
                 """
                    --------
                    |      |
@@ -80,7 +80,7 @@ def draw_hangman():
                    |     
                    -
                 """,
-                # initial empty state
+                # begintoestand
                 """
                    --------
                    |      |
@@ -93,7 +93,7 @@ def draw_hangman():
     ]
     return stages[attempts]
 
-# hangman
+# galgje en input-regels
 def hangman(visual_mode = True):
     global attempts
 
@@ -123,10 +123,11 @@ def hangman(visual_mode = True):
                 print(f"Je hebt geen pogingen meer, sorry! Het woord was {word}.")
                 break
             if guess not in letters:
-                print(f"Speciale tekens en cijfers zijn niet toegestaan; probeer opnieuw. Je hebt nog {attempts} pogingen over.")
+                print(f"Speciale tekens, cijfers of geen invoer zijn/is niet toegestaan; probeer opnieuw. Je hebt nog {attempts} pogingen over.")
                 attempts += 1
 visual_mode = input("Wil je met beeld spelen? (ja/nee): ")
 if visual_mode.lower() == "ja":
     hangman()
 else:
-    hangman(False)  
+    hangman(False)
+input("Spel beëindigd: Druk op Enter om te sluiten...")

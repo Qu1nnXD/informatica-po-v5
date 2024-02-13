@@ -17,24 +17,30 @@ while run:
   if "".join(geradenWoord) == woord:
     print("Je hebt het woord geraden!")
     break
-  gok = input("Raad een letter: ")
+  gok = input("Raad een letter: ").lower()
+  print()
   if gok in gokken:
     print("je hebt deze letter al geraden")
-  if gok in alfabet:
+  elif gok in alfabet:
     if gok in woord:
       gokken.append(gok)
     for aantalLetters in range(0, len(woord)):
       if gok == woord[aantalLetters]:
         geradenWoord[aantalLetters] = gok
         print(geradenWoord)
+        print()
         gokken.append(gok)
     if gok not in woord:
       print("Helaas de letter " + gok + " zit niet in het woord.")
+      print("Je hebt nog " + str(5 - pogingen) + " pogingen over.")
+      print()
       pogingen = pogingen + 1
       print(geradenWoord)
+      print()
       gokken.append(gok)
     if pogingen >= 6:
       print("Helaas je hebt het woord niet geraden. ")
       run = False
   else:
     print("Dit is geen geldige letter.")
+    print()
