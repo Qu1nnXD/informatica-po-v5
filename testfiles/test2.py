@@ -9,7 +9,7 @@ def choose_word():
     return random.choice(words)
 word = choose_word()
 
-# woorden tonen
+# woorden/symbolen tonen
 def displayed_word(word, guessed_letters):
     display = " "
     for letter in word:
@@ -93,7 +93,7 @@ def draw_hangman():
     ]
     return stages[attempts]
 
-# galgje en input-regels
+# galgje functie definiëren en input-regels
 def hangman(visual_mode = True):
     global attempts
 
