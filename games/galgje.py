@@ -1,3 +1,4 @@
+# door Quinn Poort, V5a
 import random
 guessed_letters = []
 attempts = 6
