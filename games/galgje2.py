@@ -1,6 +1,7 @@
+# door Mathijs de Gruiter, V5a
 import random
 
-# galgje 
+# galgje door middel van een lijst, ^ hier wordt een library geïmporteerd 
 print("Welkom bij galgje!")
 woorden = ["welkom", "galgje", "leugen", "babbelen", "schrijver"]
 woord = random.choice(woorden)
@@ -11,7 +12,7 @@ pogingen = 0
 gokken = list()
 alfabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-
+# while en for loops die het spel laten lopen, pogingen optelt, en context geeft aan potentiële gokken van de speler met de if/elif/else-statements
 while run:
 
   if "".join(geradenWoord) == woord:
