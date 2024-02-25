@@ -3,13 +3,13 @@ guessed_letters = []
 attempts = 6
 max:attempts = 6
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o','p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ë', 'ä', 'ö', 'ü', 'ï', 'é', 'è']
-# woord kiezen
+# woord kiezen door middel van een lijst
 def choose_word():
     words =["kaas", "ham", "boterham", "leverworst", "tosti", "frikandelbroodje", "saucijzenbroodje", "croissant", "hagelslag", "boter", "pindakaas", "chocopasta", "bolus", "zeehond", "melk", "chocolademelk", "fristi", "koffie", "thee", "papier", "computer", "telefoon", "financiën", "yuzu", "telecomprovider", "verantwoordelijkheid", "sympathie", "activiteit", "catastrofe", "anaal", "prostaatkanker", "maatschappij", "wappie", "vaccinatie", "liquidatie", "klimaatverandering", "koolstofdioxide", "uitdaging", "mensheid", "narcostaat", "douanepolitie", "zelfgenoegzaamheid", "meervoudigepersoonlijkheidsstoornis"]
     return random.choice(words)
 word = choose_word()
 
-# woorden/symbolen tonen
+# woorden/symbolen tonen met een for loop en if/else-statements
 def displayed_word(word, guessed_letters):
     display = " "
     for letter in word:
