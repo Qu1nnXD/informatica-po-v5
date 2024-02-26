@@ -1,9 +1,10 @@
 # door Mathijs de Gruiter, V5a
 import random
 
-# galgje door middel van een lijst, ^ hier wordt een library geïmporteerd 
+# Galgje door middel van een lijst, ^ hier wordt een library geïmporteerd 
+# De lijst met woorden kan makkelijk uitgebreid worden maar dat is niet nodig zolang de code werkt.
 print("Welkom bij galgje!")
-woorden = ["welkom", "galgje", "leugen", "babbelen", "schrijver"]
+woorden = ["welkom", "tafels", "olifant", "computer", "schrijver"]
 woord = random.choice(woorden)
 geradenWoord = ["_"] * len(woord)
 print("Dit is je woord. " + "-" * len(woord))
